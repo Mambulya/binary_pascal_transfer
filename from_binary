@@ -1,0 +1,19 @@
+program to_inger;
+var n, binInteger : Integer;
+intNumber : Real;
+
+begin
+  writeln('your bin number:');
+  readln(binInteger);
+  n := 0;
+  intNumber := 0;
+  
+  while binInteger <> 0 do
+    begin
+      intNumber += (binInteger mod 10)*(exp(n*LN(2)));
+      n += 1;
+      binInteger := binInteger div 10;
+    end;
+    
+  writeln('your number in int m=notation = ', intNumber);
+ end.
