@@ -1,0 +1,35 @@
+{
+from_decimal
+10 - ?
+}
+program from_decimal;
+
+var number, i : Integer;
+res, remainder, final_res : String;
+
+begin
+	writeln('Your integer: ');
+	readln(number);
+
+// begining check
+if (number <= 2) then
+	begin
+		writeln('-');
+		exit();
+	end;
+
+
+while number >= 2 do
+	begin
+		str(number mod 2, remainder);
+		res += remainder;
+		number := number div 2;
+	end;
+
+// reverse the reasult
+for i:=length(res) downto 1 do
+	final_res:=final_res+res[i];
+
+writeln('your number in binary notation = 1', final_res);
+
+end.
